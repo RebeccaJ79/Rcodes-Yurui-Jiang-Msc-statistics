@@ -1,0 +1,2 @@
+# R-codes-for-Yurui-Jiang-s-Msc-statistics-dissertation-
+R codes for Yurui Jiang's paper: THE GEOMETRY OF POLITICAL IDEOLOGY: COMPARING EUCLIDEAN AND NON-EUCLIDEAN DIMENSION REDUCTION AND LATENT SPACE MODELS
