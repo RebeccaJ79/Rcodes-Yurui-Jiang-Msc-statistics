@@ -51,5 +51,3 @@ For reproducibility, users should run the relevant data-preparation procedures b
 ## Author
 
 **Yurui Jiang**
-
-MSc Statistics Dissertation
