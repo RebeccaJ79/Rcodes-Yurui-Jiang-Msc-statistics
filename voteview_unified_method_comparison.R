@@ -1,7 +1,6 @@
 #### Unified Members' Votes method comparison --------------------------------
 # This script compares methods from one cleaned 119th House Members' Votes sample.
 # Each method uses the representation required by its statistical formulation.
-# Run each section from top to bottom in RStudio.
 
 #### Packages and working directory ------------------------------------------
 

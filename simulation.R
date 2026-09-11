@@ -1,6 +1,6 @@
 #### Simulation feasibility study --------
 
-#### Packages and settings -----------------------------------------------
+# Packages and settings
 
 library(dplyr)
 

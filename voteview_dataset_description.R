@@ -1,9 +1,6 @@
 #### 119th House Voteview dataset description -------------------------------
-# This tutorial-style script describes the cleaned Members' Votes data.
-# Run the sections from top to bottom in RStudio.
 
-#### Packages and working directory ------------------------------------------
-library(readr)
+# Packages and working directory
 library(dplyr)
 library(tidyr)
 library(tibble)
@@ -12,7 +9,7 @@ library(patchwork)
 
 setwd("E:/MSc_dissertation/data")
 
-#### Read and clean the 119th House voting records ---------------------------
+# Read and clean the 119th House voting records
 votes_119 <- read_csv("H119_votes.csv", show_col_types = FALSE) |>
   filter(chamber == "House") |>
   mutate(vote_binary = case_when(cast_code %in% c(1, 2, 3) ~ 1, cast_code %in% c(4, 5, 6) ~ 0, TRUE ~ NA_real_))
@@ -34,7 +31,7 @@ vote_matrix <- votes_119 |>
   column_to_rownames("icpsr") |>
   as.matrix()
 
-#### Apply the common 80% completeness rule -------------------------------
+# Apply the common 80% completeness rule
 repeat {
   old_dimensions <- dim(vote_matrix)
   member_completeness <- rowMeans(!is.na(vote_matrix))
@@ -49,7 +46,7 @@ members_retained <- members_119 |>
   filter(icpsr %in% as.numeric(member_ids)) |>
   arrange(match(icpsr, as.numeric(member_ids)))
 
-#### Basic dataset checks ----------------------------------------------------
+# Basic dataset checks 
 message("Retained ", nrow(vote_matrix), " legislators and ", ncol(vote_matrix), " roll calls.")
 message("Overall missing proportion: ", round(mean(is.na(vote_matrix)), 3))
 print(table(members_retained$party))
