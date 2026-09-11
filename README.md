@@ -42,7 +42,14 @@ These simulations are used to investigate how multidimensional scaling (MDS) and
 
 ## Data
 The empirical analysis uses roll-call voting data from the **119th U.S. House of Representatives**, obtained from Voteview.
-The scripts include the data-cleaning and preprocessing procedures required for the analyses described in the dissertation.
+
+| Source file | Contents | Use |
+| --- | --- | --- |
+| `H119_votes.csv` | Member-level roll-call voting records, including legislator identifiers, roll-call numbers, and cast codes. | Used to construct the cleaned legislator-by-roll-call vote matrix and pairwise voting-disagreement measures. |
+| `H119_members.csv` | House-member metadata, including ICPSR identifiers and party codes. | Used to align member information with the vote matrix and to label legislators by party in descriptive summaries and figures. |
+| `H119_rollcalls.json` | Roll-call metadata, including identifiers and, where available, CRS policy-area and subject labels. | Used for metadata auditing and the policy-profile robustness analysis. DW-NOMINATE coordinates are not used as inputs to the fitted methods. |
+
+The scripts contain the data-cleaning and preprocessing procedures required for the analyses described in the dissertation.
 
 ## Reproducibility
 The scripts in this repository correspond to the empirical analyses, robustness checks, simulations, and graphical results reported in the dissertation.
